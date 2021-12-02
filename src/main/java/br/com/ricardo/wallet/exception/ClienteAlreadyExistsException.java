@@ -11,6 +11,6 @@ public class ClienteAlreadyExistsException extends EntityExistsException {
 	}
 	
 	public ClienteAlreadyExistsException(Long id, String cpf) {
-		this(String.format("Já existe um cliente cadastrad com o cpf %s.", cpf));
+		this(String.format("Já existe um cliente cadastrado com o cpf %s.", cpf));
 	}
 }

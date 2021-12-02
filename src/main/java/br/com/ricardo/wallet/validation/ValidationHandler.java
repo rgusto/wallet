@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
+import br.com.ricardo.wallet.exception.ClienteAlreadyExistsException;
 import br.com.ricardo.wallet.exception.ClienteNotFoundException;
 import br.com.ricardo.wallet.exception.ContaAlreadyExistsException;
 import br.com.ricardo.wallet.exception.ContaNotFoundException;
@@ -51,6 +52,13 @@ public class ValidationHandler {
 	@ExceptionHandler(ContaNotFoundException.class)
 	public ResponseError handleContaNotFoundException(ContaNotFoundException exception) {
 		ResponseError responseError = new ResponseError(404, exception.getMessage());
+		return responseError;
+	}
+	
+	@ResponseStatus(code = HttpStatus.BAD_REQUEST)
+	@ExceptionHandler(ClienteAlreadyExistsException.class)
+	public ResponseError handleClienteAlreadyExistsException(ClienteAlreadyExistsException exception) {
+		ResponseError responseError = new ResponseError(400, exception.getMessage());
 		return responseError;
 	}
 	
