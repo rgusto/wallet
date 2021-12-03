@@ -4,12 +4,12 @@ spring:
     username: root
     password: 12345678
   jpa:
-    generate-ddl: true
     hibernate:
-      ddl-auto: update
+      ddl-auto: create
+    database: mysql
     properties:
-      hibernate:
-        dialect:org.hibernate.dialect.MySQL57Dialect
+        hibernate:
+        dialect: org.hibernate.dialect.MySQL57Dialect       
     show-sql: true
 server:
   port: 8081
