@@ -10,10 +10,11 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import br.com.ricardo.wallet.exception.ContaNotFoundException;
-import br.com.ricardo.wallet.model.Conta;
-import br.com.ricardo.wallet.model.Lancamento;
-import br.com.ricardo.wallet.model.TipoOperacaoEnum;
+import br.com.ricardo.wallet.domain.exception.ContaNotFoundException;
+import br.com.ricardo.wallet.domain.model.Conta;
+import br.com.ricardo.wallet.domain.model.Lancamento;
+import br.com.ricardo.wallet.domain.model.TipoOperacaoEnum;
+import br.com.ricardo.wallet.domain.service.LancamentoService;
 
 @SpringBootTest
 public class LancamentoServiceTest {
@@ -87,10 +88,7 @@ public class LancamentoServiceTest {
 			lancamento.setValor(BigDecimal.TEN);
 
 			lancamentoService.create(lancamento);
-		});		
-		
-		
-
+		});
 
 	}
 

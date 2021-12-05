@@ -8,9 +8,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.dao.DataIntegrityViolationException;
 
-import br.com.ricardo.wallet.exception.ClienteAlreadyExistsException;
-import br.com.ricardo.wallet.exception.ClienteNotFoundException;
-import br.com.ricardo.wallet.model.Cliente;
+import br.com.ricardo.wallet.domain.exception.ClienteAlreadyExistsException;
+import br.com.ricardo.wallet.domain.exception.ClienteNotFoundException;
+import br.com.ricardo.wallet.domain.model.Cliente;
+import br.com.ricardo.wallet.domain.service.ClienteService;
 
 @SpringBootTest
 public class ClienteServiceTest {

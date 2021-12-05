@@ -8,10 +8,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.dao.DataIntegrityViolationException;
 
-import br.com.ricardo.wallet.exception.ContaAlreadyExistsException;
-import br.com.ricardo.wallet.exception.ContaNotFoundException;
-import br.com.ricardo.wallet.model.Cliente;
-import br.com.ricardo.wallet.model.Conta;
+import br.com.ricardo.wallet.domain.exception.ContaAlreadyExistsException;
+import br.com.ricardo.wallet.domain.exception.ContaNotFoundException;
+import br.com.ricardo.wallet.domain.model.Cliente;
+import br.com.ricardo.wallet.domain.model.Conta;
+import br.com.ricardo.wallet.domain.service.ContaService;
 
 @SpringBootTest
 public class ContaServiceTest {
