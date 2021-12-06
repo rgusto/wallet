@@ -9,6 +9,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+import javax.validation.constraints.DecimalMin;
 
 @Entity
 public class Lancamento {
@@ -23,9 +24,11 @@ public class Lancamento {
 	@Column(nullable = false, columnDefinition = "datetime")
 	private OffsetDateTime dataLancamento;
 	
+	@Column(nullable = false)
 	private TipoOperacaoEnum tipoOperacao;
 	
-	//@DecimalMin(value = "0.0", inclusive = false)
+	@Column(nullable = false)
+	@DecimalMin(value = "0", inclusive = false)
 	private BigDecimal valor;
 
 	public Long getId() {

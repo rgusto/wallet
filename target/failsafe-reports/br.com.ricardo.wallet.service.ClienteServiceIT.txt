@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: br.com.ricardo.wallet.service.ClienteServiceIT
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.481 s - in br.com.ricardo.wallet.service.ClienteServiceIT

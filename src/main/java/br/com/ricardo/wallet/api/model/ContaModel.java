@@ -1,7 +1,5 @@
 package br.com.ricardo.wallet.api.model;
 
-import java.math.BigDecimal;
-
 import br.com.ricardo.wallet.domain.model.Cliente;
 
 public class ContaModel {
@@ -10,7 +8,6 @@ public class ContaModel {
 	private String agencia;
 	private String numero;
 	private Cliente titular;
-	private BigDecimal saldo;
 
 	public Long getId() {
 		return id;
@@ -42,14 +39,6 @@ public class ContaModel {
 
 	public void setTitular(Cliente titular) {
 		this.titular = titular;
-	}
-
-	public BigDecimal getSaldo() {
-		return saldo;
-	}
-
-	public void setSaldo(BigDecimal saldo) {
-		this.saldo = saldo;
 	}
 
 }

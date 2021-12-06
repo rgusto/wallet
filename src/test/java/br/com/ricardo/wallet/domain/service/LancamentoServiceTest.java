@@ -1,4 +1,4 @@
-package br.com.ricardo.wallet.service;
+package br.com.ricardo.wallet.domain.service;
 
 import java.math.BigDecimal;
 import java.time.OffsetDateTime;
@@ -9,6 +9,7 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.dao.DataIntegrityViolationException;
 
 import br.com.ricardo.wallet.domain.exception.ContaNotFoundException;
 import br.com.ricardo.wallet.domain.model.Conta;
@@ -43,7 +44,7 @@ public class LancamentoServiceTest {
 	@Test
 	public void deveFalhar_AoFazerLancamento_SemValor() {
 
-		Assertions.assertThrows(ConstraintViolationException.class, () -> {
+		Assertions.assertThrows(DataIntegrityViolationException.class, () -> {
 			Conta conta = new Conta();
 			conta.setId(1L);
 
@@ -78,7 +79,7 @@ public class LancamentoServiceTest {
 	@Test
 	public void deveFalhar_AoFazerLancamento_SemTipoLancamento() {
 
-		Assertions.assertThrows(ConstraintViolationException.class, () -> {
+		Assertions.assertThrows(DataIntegrityViolationException.class, () -> {
 			Conta conta = new Conta();
 			conta.setId(1L);
 

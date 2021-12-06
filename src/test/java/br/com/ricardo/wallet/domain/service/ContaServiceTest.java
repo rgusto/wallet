@@ -1,6 +1,4 @@
-package br.com.ricardo.wallet.service;
-
-import javax.validation.ConstraintViolationException;
+package br.com.ricardo.wallet.domain.service;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -23,7 +21,7 @@ public class ContaServiceTest {
 	@Test
 	public void deveFalhar_AoCadastrarConta_SemAgencia() {
 		
-		Assertions.assertThrows(ConstraintViolationException.class, () -> {
+		Assertions.assertThrows(DataIntegrityViolationException.class, () -> {
 			Cliente titular = new Cliente();
 			titular.setId(1L);
 			
@@ -40,7 +38,7 @@ public class ContaServiceTest {
 	@Test
 	public void deveFalhar_AoCadastrarConta_SemNumero() {
 		
-		Assertions.assertThrows(ConstraintViolationException.class, () -> {
+		Assertions.assertThrows(DataIntegrityViolationException.class, () -> {
 			Cliente titular = new Cliente();
 			titular.setId(1L);
 			

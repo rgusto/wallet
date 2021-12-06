@@ -15,8 +15,10 @@ public class SwaggerConfigurations implements WebMvcConfigurer {
 
 	@Bean
 	public Docket walletApi() {
-		return new Docket(DocumentationType.SWAGGER_2).select()
-				.apis(RequestHandlerSelectors.basePackage("br.com.ricardo.wallet")).paths(PathSelectors.ant("/**"))
+		return new Docket(DocumentationType.SWAGGER_2)
+				.select()
+				.apis(RequestHandlerSelectors.basePackage("br.com.ricardo.wallet"))
+				.paths(PathSelectors.ant("/**"))
 				.build();
 	}
 

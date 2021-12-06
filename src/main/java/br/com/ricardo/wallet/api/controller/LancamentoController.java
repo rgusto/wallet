@@ -59,7 +59,7 @@ public class LancamentoController {
 			@RequestBody @Valid TransferenciaInput input) throws SaldoInsuficienteException {
 		Lancamento lancamento = transferenciaConverter.toDomainObject(input);
 		lancamentoService.transfer(idContaOrigem, idContaDestino, lancamento);
-		return ResponseEntity.noContent().build();
+		return ResponseEntity.ok().build();
 	}
 
 }

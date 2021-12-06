@@ -11,7 +11,7 @@ import br.com.ricardo.wallet.domain.model.TipoOperacaoEnum;
 public class LancamentoInput {
 
 	@NotNull
-	private Conta conta;
+	private ContaIdInput conta;
 
 	@NotNull
 	private TipoOperacaoEnum tipoOperacao;
@@ -19,11 +19,11 @@ public class LancamentoInput {
 	@DecimalMin(value = "0.0", inclusive = false)
 	private BigDecimal valor;
 
-	public Conta getConta() {
+	public ContaIdInput getConta() {
 		return conta;
 	}
 
-	public void setConta(Conta conta) {
+	public void setConta(ContaIdInput conta) {
 		this.conta = conta;
 	}
 

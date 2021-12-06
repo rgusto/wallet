@@ -14,7 +14,7 @@ public class ContaInput {
 	private String numero;
 
 	@NotNull
-	private Cliente titular;
+	private ClienteIdInput titular;
 
 	public String getAgencia() {
 		return agencia;
@@ -32,11 +32,11 @@ public class ContaInput {
 		this.numero = numero;
 	}
 
-	public Cliente getTitular() {
+	public ClienteIdInput getTitular() {
 		return titular;
 	}
 
-	public void setTitular(Cliente titular) {
+	public void setTitular(ClienteIdInput titular) {
 		this.titular = titular;
 	}
 
